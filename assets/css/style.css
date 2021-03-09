@@ -57,6 +57,24 @@
   text-transform: uppercase;
   font-weight: bold;
 }
+.menu-list-item{
+  position: relative;
+}
+
+.menu-list-item::after{
+  content: "";
+  position: absolute;
+  display: block;
+  height: 3px;
+  width: 0;
+  background-color: #fff;
+  top:calc(100% + 5px);
+  transition: width .3s ease-in-out;
+}
+
+.menu-list-item:hover::after{
+  width: 100%;
+}
 
 .contact {
   border: 2px solid #fff;
